@@ -76,3 +76,27 @@ h1 {
 .blink {
     visibility: hidden;
 }
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        backdrop-filter: blur(1px);
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+}
+
+
