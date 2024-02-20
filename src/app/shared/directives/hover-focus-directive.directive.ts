@@ -28,6 +28,10 @@ export class HoverFocusDirective {
     this.setActiveClass(false);
   }
 
+  /**
+   * Permet d'ajouter ou de supprimer une classe dans une balise si on survole un élement avec la souris ou si il est focus avec le clavier
+   * @param isActive true ou false
+   */
   private setActiveClass(isActive: boolean) {
     if (isActive) {
         if (this.appHoverFocus === 'bi-hover') {

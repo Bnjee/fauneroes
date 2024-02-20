@@ -28,11 +28,13 @@
     class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
   >
     <div class="content text-center">
-      <h1 id="title"><span>AN EPIC</span><b id="cursor">_</b> ADVENTURE AWAITS YOU!</h1>
+      <h1 id="title">AN ADVENTURE AWAITS YOU!<br>
+        <span>EPIC</span><b id="cursor" [ngClass]="{'blink': shouldBlink}">_</b></h1>
     </div>
   </div>
 
   <!-- Main Content Area -->
+  <!-- TODO a mettre dans un composant à part -->
   <div class="container my-5 d-grid gap-5" id="media">
     <div class="p-5 border">
       <p>

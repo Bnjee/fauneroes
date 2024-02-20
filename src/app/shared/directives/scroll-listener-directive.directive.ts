@@ -10,6 +10,9 @@ export class ScrollListenerDirective {
 
   constructor() { }
 
+  /**
+   * Permet de déclencher un event (true) lors du scroll
+   */
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     const offset = window.document.documentElement.scrollTop || window.document.body.scrollTop || 0;
