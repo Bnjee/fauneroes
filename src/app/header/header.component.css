@@ -52,16 +52,19 @@ img.logo {
 }
 
 .bi-hover {
-    color: rgba(245, 191, 66, 0.508) !important;
+    color: rgba(245, 191, 66, 0.7) !important;
 }
 
 .active-hover {
-    color: rgba(255, 255, 255, 0.508) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 @media (max-width: 992px) {
     .navbar-collapse {
         text-align: right;
+    }
+    .nav-link {
+        max-width: 95%;
     }
 }
 

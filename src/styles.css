@@ -3,8 +3,13 @@
     src: url('assets/fonts/sherwood.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'roboto';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
 body {
-    font-family: 'sherwood', sans-serif;
+    font-family: 'roboto', sans-serif;
     background-color: rgb(112, 94, 86);
     color: white;
 }
