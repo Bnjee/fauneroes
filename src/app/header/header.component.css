@@ -1,0 +1,78 @@
+.banner-image {
+    background-image: url('../../assets/images/2.png');
+    background-size: cover;
+}
+
+.logo-large {
+    width: 400px;
+    height: auto;
+}
+
+.logo-small {
+    width: 300px;
+    height: auto;
+}
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 992px) {
+    .logo-large {
+        width: 300px;
+        height: auto;
+    }
+    
+    .logo-small {
+        width: 200px;
+        height: auto;
+    }
+}
+
+/* Pour les écrans de taille petit */
+@media (max-width: 500px) {
+    .logo-large {
+        width: 200px;
+        height: auto;
+    }
+    
+    .logo-small {
+        width: 100px;
+        height: auto;
+    }
+}
+
+img.logo {
+    transition: all 0.5s ease; 
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.bi {
+    color: rgb(245, 190, 66);
+}
+
+.bi-hover {
+    color: rgba(245, 191, 66, 0.508) !important;
+}
+
+.active-hover {
+    color: rgba(255, 255, 255, 0.508) !important;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        text-align: right;
+    }
+}
+
+h1 span, h1 b{
+    color:rgb(245, 190, 66);
+}
+
+h1 {
+    color: rgb(206, 206, 206);
+}
+
+.blink {
+    visibility: hidden;
+}
