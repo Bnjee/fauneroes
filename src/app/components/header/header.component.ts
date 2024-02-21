@@ -4,6 +4,7 @@ import { HoverFocusDirective } from '../../directives/hover-focus-directive.dire
 import { ScrollListenerDirective } from '../../directives/scroll-listener-directive.directive';
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NgOptimizedImage } from '@angular/common'
 
 @Component({
@@ -24,13 +25,14 @@ export class HeaderComponent implements OnInit {
   shouldBlink = false;
 
   constructor() {
-    gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(TextPlugin, ScrollTrigger);
   }
 
   ngOnInit(): void {
     this.initH1Text();
     /** Permet de faire clignoter le underscore */
     setInterval(() => this.blink(), 800);
+    this.setParallaxImage();
   }
 
   /**
@@ -76,6 +78,25 @@ export class HeaderComponent implements OnInit {
       duration: 1,
       text: { value: txt },
       onComplete: callback
+    });
+  }
+
+  /**
+   * Permet de faire un effet de parallax sur l'image de la bannière
+   */
+  private setParallaxImage(): void {
+    gsap.fromTo('.banner-image', {
+      backgroundPosition: () => "50% 0px"
+    }, {
+      backgroundPosition: () => `50% 200px`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: '.banner-image',
+        start: () => "top top", 
+        end: "bottom top",
+        scrub: true,
+        invalidateOnRefresh: true
+      }
     });
   }
 }
