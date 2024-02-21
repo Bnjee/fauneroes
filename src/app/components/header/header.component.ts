@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { HoverFocusDirective } from '../shared/directives/hover-focus-directive.directive';
-import { ScrollListenerDirective } from '../shared/directives/scroll-listener-directive.directive';
+import { HoverFocusDirective } from '../../directives/hover-focus-directive.directive';
+import { ScrollListenerDirective } from '../../directives/scroll-listener-directive.directive';
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { NgOptimizedImage } from '@angular/common'
@@ -9,7 +9,11 @@ import { NgOptimizedImage } from '@angular/common'
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HoverFocusDirective, ScrollListenerDirective, NgOptimizedImage],
+  imports: [
+    CommonModule, 
+    HoverFocusDirective, 
+    ScrollListenerDirective, 
+    NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

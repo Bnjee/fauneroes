@@ -8,8 +8,13 @@
     src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'signika';
+    src: url('assets/fonts/Signika-Bold.ttf') format('truetype');
+}
+
 body {
-    font-family: 'roboto', sans-serif;
+    font-family: 'signika', sans-serif;
     background-color: rgb(112, 94, 86);
     color: white;
 }

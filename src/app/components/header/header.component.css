@@ -1,6 +1,7 @@
 .banner-image {
-    background-image: url('../../assets/images/background.png');
+    background-image: url('../../../assets/images/background.png');
     background-size: cover;
+    background-attachment: scroll;
 }
 
 .logo-large {
@@ -101,5 +102,3 @@ h1 {
         border-radius: 10px;
     }
 }
-
-
