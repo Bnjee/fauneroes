@@ -18,3 +18,11 @@ body {
     background-color: rgb(112, 94, 86);
     color: white;
 }
+
+.bi {
+    color: rgb(245, 190, 66);
+}
+
+.bi-hover {
+    color: rgba(245, 191, 66, 0.7) !important;
+}

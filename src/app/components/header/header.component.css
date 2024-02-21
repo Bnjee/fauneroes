@@ -47,14 +47,6 @@ img.logo {
     font-size: 1.25rem;
 }
 
-.bi {
-    color: rgb(245, 190, 66);
-}
-
-.bi-hover {
-    color: rgba(245, 191, 66, 0.7) !important;
-}
-
 .active-hover {
     color: rgba(255, 255, 255, 0.7) !important;
 }
