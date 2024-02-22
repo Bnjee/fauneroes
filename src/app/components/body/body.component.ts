@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { GameComponent } from './game/game.component';
 import { FeaturesComponent } from './features/features.component';
 import { MediaComponent } from './media/media.component';
 import { JoinComponent } from './join/join.component';
 import { FaqComponent } from './faq/faq.component';
+import { AboutComponent } from './about/about.component';
 
 @Component({
   selector: 'app-body',
   standalone: true,
   imports: [
-    GameComponent,
+    AboutComponent,
     FeaturesComponent,
     MediaComponent,
     JoinComponent,
