@@ -36,9 +36,9 @@ export class BodyComponent {
    */
     private setParallaxImage(): void {
       gsap.fromTo('.background-image', {
-        backgroundPosition: () => "50% -200px"
+        backgroundPosition: () => "50% 0px"
       }, {
-        backgroundPosition: () => `50% 0px`,
+        backgroundPosition: () => `50% 200px`,
         ease: "none",
         scrollTrigger: {
           trigger: '.background-image',
