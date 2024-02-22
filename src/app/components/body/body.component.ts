@@ -33,6 +33,7 @@ export class BodyComponent {
 
   /**
    * Permet de faire un effet de parallax sur les images
+   * La logique est placé ici au cas où on rajoute des images parallax
    */
     private setParallaxImage(): void {
       gsap.fromTo('.background-image', {

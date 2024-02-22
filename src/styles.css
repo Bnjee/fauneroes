@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'sherwood';
-    src: url('assets/fonts/sherwood.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'roboto';
-    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'signika';
+    font-family: 'signika-bold';
     src: url('assets/fonts/Signika-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'signika-light';
+    src: url('assets/fonts/Signika-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'signika-semi-blold';
+    src: url('assets/fonts/Signika-SemiBold.ttf') format('truetype');
+}
+
 body {
-    font-family: 'signika', sans-serif;
-    background-color: rgb(112, 94, 86);
-    color: white;
+    font-family: 'signika-light', sans-serif;
+    background-color: #D9C8B4;
+    color: #401A0C;
 }
 
 .bi {
