@@ -1,38 +1,34 @@
-<!-- Navbar  -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="assets/images/Logo_Fauneroes_Big.webp" alt="Logo" class="logo" 
-            appScrollListener (isScrolled)="onScrolled($event)"
-            [ngClass]="{'logo-large': !scrolled, 'logo-small': scrolled}">
-        </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav navbar-nav-scroll ms-auto">
-          <div class="nav-link active"><a aria-current="page" href="#" appHoverFocus="active-hover">Home</a></div>
-          <div class="nav-link active"><a href="#game" appHoverFocus="active-hover">About</a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="active-hover">Features</a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="active-hover">Media</a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="active-hover">FAQ</a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="active-hover">Join</a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-twitter-x"></i></a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-tiktok"></i></a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-instagram"></i></a></div>
-          <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-discord"></i></a></div>
-        </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Logo_Fauneroes_Big.webp" alt="Logo" class="logo" appScrollListener
+        (isScrolled)="onScrolled($event)" [ngClass]="{'logo-large': !scrolled, 'logo-small': scrolled}">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav navbar-nav-scroll ms-auto">
+        <div class="nav-link active"><a aria-current="page" href="#" appHoverFocus="active-hover">Home</a></div>
+        <div class="nav-link active"><a href="#game" appHoverFocus="active-hover">About</a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="active-hover">Features</a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="active-hover">Media</a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="active-hover">FAQ</a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="active-hover">Join</a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-twitter-x"></i></a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-tiktok"></i></a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-instagram"></i></a></div>
+        <div class="nav-link active"><a href="#" appHoverFocus="bi-hover"><i class="bi bi-discord"></i></a></div>
       </div>
     </div>
-  </nav>
-
-  <!-- Banner Image  -->
-  <div
-    class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
-  >
-    <div class="content text-center">
-      <h1 id="title">
-        JOIN OUR <span>EPIC</span><b id="cursor" [ngClass]="{'blink': shouldBlink}">_</b> <br>ADVENTURE!<br>
-      </h1>
-    </div>
   </div>
+</nav>
+
+<div class="background-image w-100 vh-100 d-flex justify-content-center align-items-center">
+  <div class="content text-center">
+    <h1 id="title">
+      JOIN OUR <span>EPIC</span><b id="cursor" [ngClass]="{'blink': shouldBlink}">_</b> <br>ADVENTURE!<br>
+    </h1>
+  </div>
+</div>
