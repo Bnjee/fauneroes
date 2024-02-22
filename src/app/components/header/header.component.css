@@ -98,4 +98,5 @@ a {
     font-family: 'signika-bold', sans-serif;
     color: white;
     text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
 }
