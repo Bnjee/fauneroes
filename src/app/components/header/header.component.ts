@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { HoverFocusDirective } from '../../directives/hover-focus-directive.directive';
 import { ScrollListenerDirective } from '../../directives/scroll-listener-directive.directive';
 import { gsap } from "gsap";
@@ -23,10 +23,12 @@ export class HeaderComponent implements OnInit {
   title = 'Fauneroes';
   scrolled = false;
   shouldBlink = false;
+  screenWidth = 0;
   private readonly classNames = ['.layer-1', '.layer-2', '.layer-3', '.layer-4', '.layer-5'];
 
   constructor(private imageService: ImageService) {
     gsap.registerPlugin(TextPlugin, ScrollTrigger);
+    this.getScreenSize();
   }
 
   ngOnInit(): void {
@@ -36,9 +38,17 @@ export class HeaderComponent implements OnInit {
     //setInterval(() => this.blink(), 800);
 
     /** Effet de parallax sur les images */
-    this.classNames.forEach((className, index) => {
-      this.imageService.setParallaxImage(className, index);
+    if (this.screenWidth > 992) {
+      const classNamesSize = this.classNames.length;
+      this.classNames.forEach((className, index) => {
+      this.imageService.setParallaxImage(className, classNamesSize - index);
     });
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+      this.screenWidth = window.innerWidth;
   }
 
   /**
