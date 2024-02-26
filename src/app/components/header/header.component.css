@@ -1,46 +1,14 @@
-.parallax-container {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+.parallax-container{
     position: relative;
- }
-
- .layer-1,
- .layer-2,
- .layer-3,
- .layer-4 {
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
+    overflow: hidden;
 }
 
-.layer-1 {
-    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_0.webp');
-}
-
-.layer-2 {
-    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_1.webp');
-}
-
-.layer-3 {
-    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_2.webp');
-    background-position: bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.layer-4 {
-    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_3.webp');
-    background-position: right bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.layer-5 {
-    z-index: 5;
+.layer-2, .layer-3, .layer-4, .layer-5 {
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .logo-large {
@@ -81,7 +49,6 @@
 
 img.logo {
     transition: all 0.5s ease; 
-    z-index: 100;
 }
 
 .nav-link {

@@ -1,9 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/Logo_Fauneroes_Big.webp" alt="Logo" class="logo" appScrollListener
-        (isScrolled)="onScrolled($event)" [ngClass]="{'logo-large': !scrolled, 'logo-small': scrolled}">
-    </a>
+    <div class="navbar-brand"></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,16 +22,26 @@
   </div>
 </nav>
 
-<div class="large-screen">
-  <div class="parallax-container w-100 vh-100 d-flex justify-content-center align-items-center">
-    <div class="layer-1"></div>
-    <div class="layer-2"></div>
-    <div class="layer-3"></div>
-    <div class="layer-4"></div>
-    <div class="content text-center layer-5">
-      <h1 id="title">
-        JOIN OUR <span>EPIC</span><b id="cursor" [ngClass]="{'blink': shouldBlink}">_</b> <br>ADVENTURE!<br>
-      </h1>
+<div class="container-fluid parallax-container">
+  <div class="row">
+    <div class="col layer-1">
+      <img src="assets/images/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
+    </div>
+    <div class="col layer-2">
+      <img src="assets/images/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
+    </div>
+    <div class="col layer-3">
+      <img src="assets/images/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
+    </div>
+    <div class="col layer-4">
+      <img src="assets/images/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
+    </div>
+    <div class="col layer-5">
+      <picture>
+        <source media="(min-width: 992px)" srcset="assets/images/Squirrel_Artwork_Layer_LogoSmall.png">
+        <source media="(max-width: 992px)" srcset="assets/images/Squirrel_Artwork_Layer_LogoLarge.png">
+        <img src="assets/images/Squirrel_Artwork_Layer_LogoSmall.png" alt="Layer 5" class="img-fluid">
+      </picture>
     </div>
   </div>
 </div>

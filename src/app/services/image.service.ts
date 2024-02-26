@@ -15,17 +15,17 @@ export class ImageService {
   /**
    * Permet de faire un effet de parallax sur les images
    * @param className 
-   * @param size 
+   * @param ratio 
    */
-  setParallaxImage(className: string, size: string): void {
+  setParallaxImage(className: string, ratio: number): void {
     gsap.fromTo(className, {
-      backgroundPosition: () => "50% 0px"
+      y: 0,
     }, {
-      backgroundPosition: () => `50% ${size}`,
+      y: 50 * ratio,
       ease: "none",
       scrollTrigger: {
         trigger: className,
-        start: () => "top top", 
+        start: "top top",
         end: "bottom top",
         scrub: true,
         invalidateOnRefresh: true

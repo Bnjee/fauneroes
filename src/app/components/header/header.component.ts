@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NgOptimizedImage } from '@angular/common'
+import { ImageService } from '../../services/image.service';
 
 @Component({
   selector: 'app-header',
@@ -21,17 +22,23 @@ import { NgOptimizedImage } from '@angular/common'
 export class HeaderComponent implements OnInit {
   title = 'Fauneroes';
   scrolled = false;
-  hoveredItem: string | null = null;
   shouldBlink = false;
+  private readonly classNames = ['.layer-1', '.layer-2', '.layer-3', '.layer-4', '.layer-5'];
 
-  constructor() {
+  constructor(private imageService: ImageService) {
     gsap.registerPlugin(TextPlugin, ScrollTrigger);
   }
 
   ngOnInit(): void {
-    this.initH1Text();
+    //this.initH1Text();
+
     /** Permet de faire clignoter le underscore */
-    setInterval(() => this.blink(), 800);
+    //setInterval(() => this.blink(), 800);
+
+    /** Effet de parallax sur les images */
+    this.classNames.forEach((className, index) => {
+      this.imageService.setParallaxImage(className, index);
+    });
   }
 
   /**

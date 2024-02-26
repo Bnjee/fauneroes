@@ -4,7 +4,6 @@ import { MediaComponent } from './media/media.component';
 import { JoinComponent } from './join/join.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
-import { ImageService } from '../../services/image.service';
 
 @Component({
   selector: 'app-body',
@@ -21,10 +20,5 @@ import { ImageService } from '../../services/image.service';
 })
 export class BodyComponent {
 
-  constructor(private imageService: ImageService) {}
-
-  ngOnInit(): void {
-    this.imageService.setParallaxImage('.layer-1', '600px');
-    this.imageService.setParallaxImage('.layer-2', '400px');
-  }
+  constructor() {}
 }
