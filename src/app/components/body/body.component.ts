@@ -4,9 +4,7 @@ import { MediaComponent } from './media/media.component';
 import { JoinComponent } from './join/join.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ImageService } from '../../services/image.service';
 
 @Component({
   selector: 'app-body',
@@ -23,32 +21,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 })
 export class BodyComponent {
 
-  constructor() {
-    gsap.registerPlugin(TextPlugin, ScrollTrigger);
-  }
+  constructor(private imageService: ImageService) {}
 
   ngOnInit(): void {
-    this.setParallaxImage();
+    this.imageService.setParallaxImage('.layer-1', '600px');
+    this.imageService.setParallaxImage('.layer-2', '400px');
   }
-
-  /**
-   * Permet de faire un effet de parallax sur les images
-   * La logique est placé ici au cas où on rajoute des images parallax
-   */
-    private setParallaxImage(): void {
-      gsap.fromTo('.background-image', {
-        backgroundPosition: () => "50% 0px"
-      }, {
-        backgroundPosition: () => `50% 200px`,
-        ease: "none",
-        scrollTrigger: {
-          trigger: '.background-image',
-          start: () => "top top", 
-          end: "bottom top",
-          scrub: true,
-          invalidateOnRefresh: true
-        }
-      });
-    }
-
 }

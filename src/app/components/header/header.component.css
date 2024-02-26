@@ -1,6 +1,46 @@
-.background-image {
-    background-image: url('../../../assets/images/background.webp');
+.parallax-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+ }
+
+ .layer-1,
+ .layer-2,
+ .layer-3,
+ .layer-4 {
+    background-position: center;
     background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.layer-1 {
+    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_0.webp');
+}
+
+.layer-2 {
+    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_1.webp');
+}
+
+.layer-3 {
+    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_2.webp');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.layer-4 {
+    background-image: url('../../../assets/images/Squirrel_Artwork_Layer_3.webp');
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.layer-5 {
+    z-index: 5;
 }
 
 .logo-large {
@@ -41,6 +81,7 @@
 
 img.logo {
     transition: all 0.5s ease; 
+    z-index: 100;
 }
 
 .nav-link {
@@ -61,11 +102,12 @@ img.logo {
 }
 
 h1 span, h1 b{
-    color:rgb(245, 190, 66);
+    color:rgb(169, 121, 10);
 }
 
 h1 {
-    color: rgb(206, 206, 206);
+    color: black;
+    font-family: 'signika-bold', sans-serif;
 }
 
 .blink {
