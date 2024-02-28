@@ -21,7 +21,7 @@ export class ImageService {
     gsap.fromTo(className, {
       y: 0,
     }, {
-      y: 50 * ratio,
+      y: ratio,
       ease: "none",
       scrollTrigger: {
         trigger: className,
@@ -29,6 +29,21 @@ export class ImageService {
         end: "bottom top",
         scrub: true,
         invalidateOnRefresh: true
+      }
+    });
+  }
+
+  /**
+   * Permet de fixer une image
+   * @param className 
+   */
+  setFixedImage(className: string): void {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: className,
+        start: "top top",
+        end: "bottom top",
+        pin: true,
       }
     });
   }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { HoverFocusDirective } from '../../directives/hover-focus-directive.directive';
 import { ScrollListenerDirective } from '../../directives/scroll-listener-directive.directive';
 import { gsap } from "gsap";
@@ -7,6 +7,11 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NgOptimizedImage } from '@angular/common'
 import { ImageService } from '../../services/image.service';
+
+interface Layer {
+  className: string;
+  ratio: number;
+}
 
 @Component({
   selector: 'app-header',
@@ -19,19 +24,23 @@ import { ImageService } from '../../services/image.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements AfterViewInit {
   title = 'Fauneroes';
   scrolled = false;
   shouldBlink = false;
   screenWidth = 0;
-  private readonly classNames = ['.layer-1', '.layer-2', '.layer-3', '.layer-4', '.layer-5'];
+  private readonly classNames: Layer[] = [
+    { className: '.layer-2', ratio: 500 },
+    { className: '.layer-3', ratio: 300 },
+    { className: '.layer-5', ratio: 150 },
+  ];
 
   constructor(private imageService: ImageService) {
     gsap.registerPlugin(TextPlugin, ScrollTrigger);
     this.getScreenSize();
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     //this.initH1Text();
 
     /** Permet de faire clignoter le underscore */
@@ -39,10 +48,10 @@ export class HeaderComponent implements OnInit {
 
     /** Effet de parallax sur les images */
     if (this.screenWidth > 992) {
-      const classNamesSize = this.classNames.length;
-      this.classNames.forEach((className, index) => {
-      this.imageService.setParallaxImage(className, classNamesSize - index);
-    });
+      this.classNames.forEach((layer: Layer) => {
+        this.imageService.setParallaxImage(layer.className, layer.ratio);
+      });
+      this.imageService.setFixedImage('.layer-1');
     }
   }
 

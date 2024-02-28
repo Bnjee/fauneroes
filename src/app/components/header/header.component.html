@@ -22,26 +22,36 @@
   </div>
 </nav>
 
-<div class="container-fluid parallax-container">
-  <div class="row">
-    <div class="col layer-1">
-      <img src="assets/images/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
-    </div>
-    <div class="col layer-2">
-      <img src="assets/images/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
-    </div>
-    <div class="col layer-3">
-      <img src="assets/images/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
-    </div>
-    <div class="col layer-4">
-      <img src="assets/images/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
-    </div>
-    <div class="col layer-5">
-      <picture>
-        <source media="(min-width: 992px)" srcset="assets/images/Squirrel_Artwork_Layer_LogoSmall.png">
-        <source media="(max-width: 992px)" srcset="assets/images/Squirrel_Artwork_Layer_LogoLarge.png">
-        <img src="assets/images/Squirrel_Artwork_Layer_LogoSmall.png" alt="Layer 5" class="img-fluid">
-      </picture>
+@if (this.screenWidth > 992) {
+  <div class="container-fluid parallax-container">
+    <div class="row">
+      <div class="col layer-1 header-image">
+        <img src="assets/images/Squirrel_Artwork_Layer_0.webp" alt="Layer 1" class="img-fluid">
+      </div>
+      <div class="col layer-2">
+        <img src="assets/images/Squirrel_Artwork_Layer_1.webp" alt="Layer 2" class="img-fluid">
+      </div>
+      <div class="col layer-3">
+        <img src="assets/images/Squirrel_Artwork_Layer_2.webp" alt="Layer 3" class="img-fluid">
+      </div>
+      <div class="col layer-4">
+        <img src="assets/images/Squirrel_Artwork_Layer_3.webp" alt="Layer 4" class="img-fluid">
+      </div>
+      <div class="col layer-5">
+        <picture>
+          <source media="(min-width: 992px)" srcset="assets/images/Squirrel_Artwork_Layer_LogoSmall.png">
+          <source media="(max-width: 992px)" srcset="assets/images/Squirrel_Artwork_Layer_LogoLarge.png">
+          <img src="assets/images/Squirrel_Artwork_Layer_LogoSmall.png" alt="Layer 5" class="img-fluid">
+        </picture>
+      </div>
     </div>
   </div>
-</div>
+} @else {
+  <div class="container-fluid parallax-container">
+    <div class="row">
+      <div class="col header-image">
+        <img src="assets/images/Squirrel_Artwork_WithLargeLogo.png" alt="Header image" class="img-fluid">
+      </div>
+    </div>
+  </div>
+}
